@@ -19,6 +19,10 @@ app.use(express.json()); // Allows the server to read JSON data sent from the fr
 const authRoutes = require('./routes/authRoutes');
 app.use('/api/auth', authRoutes);
 
+// Import and use Entry Routes
+const entryRoutes = require('./routes/entryRoutes');
+app.use('/api/entries', entryRoutes);
+
 // Basic Test Route
 app.get('/', (req, res) => {
   res.send('🚀 API is running successfully!');
